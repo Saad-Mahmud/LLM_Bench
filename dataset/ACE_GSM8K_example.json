@@ -1,0 +1,117 @@
+[{
+    "original_pronlem": "Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?",
+    "symbolic_problem": "{name1} sold {n_clips_april} clips to her {relation} in April, and then she sold {fraction} times as many clips in May. How many clips did {name1} sell altogether in April and May?",
+    "variables": {
+        "n_clips_april": "range(5, 100)",
+        "fraction": "sample([0.5, 0.25, 0.75, 1.5])",
+        "total_clips": "range(50, 200)",
+        "name1": "sample(['Sarah', 'Natalia', 'Joe', 'Fin', 'Tony'])",
+        "relation": "sample(['friends', 'family', 'colleague', 'customers'])"
+    },
+    "conditions": [
+        "n_clips_april + n_clips_april * fraction == total_clips"
+    ],
+    "symbolic_solution": "= <<{n_clips_april}*{fraction}={n_clips_may}>>{n_clips_may}, <<{n_clips_april}+{n_clips_may}={total_clips}>>{total_clips}",
+    "original_values": {
+        "n_clips_april": 48,
+        "fraction": 0.5,
+        "n_clips_may": 24,
+        "total_clips": 72,
+        "name1": "Natalia",
+        "relation": "friends"
+    },
+    "original_answer": 72
+},
+{
+    "original_pronlem": "Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?",
+    "symbolic_problem": "{name} earns ${hourly_rate} an hour for babysitting. Yesterday, {name} just did {minutes_worked} minutes of babysitting. How much did {name} earn?",
+    "variables": {
+        "hourly_rate": "range(10, 30)",
+        "minutes_worked": "range(30, 120)",
+        "earnings": "range(5, 60)",
+        "name": "sample(['Weng', 'Alex', 'Jamie', 'Taylor', 'Sam'])"
+    },
+    "conditions": [
+        "hourly_rate / 60 * minutes_worked == earnings"
+    ],
+    "symbolic_solution": "= <<{hourly_rate}/60={rate_per_minute}>>{rate_per_minute}, <<{rate_per_minute}*{minutes_worked}={earnings}>>{earnings}",
+    "original_values": {
+        "hourly_rate": 12,
+        "minutes_worked": 50,
+        "name": "Weng",
+        "earnings": 10
+    },
+    "original_answer": 10
+},
+{
+    "original_pronlem": "Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs. Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents. How much more money does Betty need to buy the wallet?",
+    "symbolic_problem": "{name} is saving money for a new wallet which costs ${wallet_cost}. {name} has only half of the money she needs. Her parents decided to give her ${parent_gift} for that purpose, and her grandparents twice as much as her parents. How much more money does {name} need to buy the wallet?",
+    "variables": {
+        "wallet_cost": "range(80, 150)",
+        "parent_gift": "range(10, 25)",
+        "needed_amount": "range(1, 50)",
+        "name": "sample(['Betty', 'Alice', 'Mia', 'Sophia', 'Emma'])"
+    },
+    "conditions": [
+        "wallet_cost - (wallet_cost / 2 + parent_gift + (parent_gift * 2)) == needed_amount"
+    ],
+    "symbolic_solution": "= <<{wallet_cost}/2={initial_savings}>>{initial_savings}, <<{parent_gift}*2={grandparent_gift}>>{grandparent_gift}, <<{wallet_cost}-{initial_savings}-{grandparent_gift}-{parent_gift}={needed_amount}>>{needed_amount}",
+    "original_values": {
+        "wallet_cost": 100,
+        "parent_gift": 15,
+        "needed_amount": 5,
+        "name": "Betty"
+    },
+    "original_answer": 5
+},
+{
+    "original_pronlem": "James writes a 3-page letter to 2 different friends twice a week. How many pages does he write a year?",
+    "symbolic_problem": "{name} writes a {pages_per_letter}-page letter to {num_friends} different friends {times_per_week} times a week. How many pages does {name} write a year?",
+    "variables": {
+        "pages_per_letter": "range(1, 5)",
+        "num_friends": "range(1, 5)",
+        "times_per_week": "range(1, 3)",
+        "weeks_per_year": "range(52,53)",
+        "total_pages": "range(100, 1000)",
+        "name": "sample(['James', 'Alex', 'Sam', 'Chris', 'Taylor'])"
+    },
+    "conditions": [
+        "pages_per_letter * num_friends * times_per_week * weeks_per_year == total_pages"
+    ],
+    "symbolic_solution": "= <<{pages_per_letter}*{num_friends}={pages_per_week_per_friend}>>{pages_per_week_per_friend}, <<{pages_per_week_per_friend}*{times_per_week}={pages_per_week}>>{pages_per_week}, <<{pages_per_week}*{weeks_per_year}={total_pages}>>{total_pages}",
+    "original_values": {
+        "pages_per_letter": 3,
+        "num_friends": 2,
+        "times_per_week": 2,
+        "weeks_per_year": 52,
+        "total_pages": 624,
+        "name": "James"
+    },
+    "original_answer": 624
+},
+{
+    "original_problem": "Albert is wondering how much pizza he can eat in one day. He buys 2 large pizzas and 2 small pizzas. A large pizza has 16 slices and a small pizza has 8 slices. If he eats it all, how many pieces does he eat that day?",
+    "symbolic_problem": "{name} is wondering how much pizza he can eat in one day. He buys {num_large_pizzas} large pizzas and {num_small_pizzas} small pizzas. A large pizza has {slices_per_large} slices and a small pizza has {slices_per_small} slices. If he eats it all, how many pieces does he eat that day?",
+    "variables": {
+        "num_large_pizzas": "range(1, 5)",
+        "num_small_pizzas": "range(1, 5)",
+        "slices_per_large": "range(10, 20)",
+        "slices_per_small": "range(6, 10)",
+        "total_slices": "range(20, 100)",
+        "name": "sample(['Albert', 'John', 'Mike', 'Chris', 'Tom'])"
+    },
+    "conditions": [
+        "num_large_pizzas * slices_per_large + num_small_pizzas * slices_per_small == total_slices"
+    ],
+    "symbolic_solution": "= <<{num_large_pizzas}*{slices_per_large}={slices_from_large}>>{slices_from_large}, <<{num_small_pizzas}*{slices_per_small}={slices_from_small}>>{slices_from_small}, <<{slices_from_large}+{slices_from_small}={total_slices}>>{total_slices}",
+    "original_values": {
+        "num_large_pizzas": 2,
+        "num_small_pizzas": 2,
+        "slices_per_large": 16,
+        "slices_per_small": 8,
+        "total_slices": 48,
+        "name": "Albert"
+    },
+    "original_answer": 48
+}
+]

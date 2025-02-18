@@ -1,0 +1,39 @@
+Base Agent:
+a) Base Done
+c) multi turn entropy IP
+
+COT:
+a) Base Done
+b) multi turn entropy IP
+c) multi turn self eval IP
+
+Multi Agent debate:
+a) mejority
+b) entropy weighted mejority
+
+COT+reflaction:
+a) Base IP
+b) multi turn entropy IP
+
+Black BOX Online:
+a) OpenAI
+b) TogetherAI
+c) Google
+d) XAI
+
+GSM Base:
+a) base Done
+b) multi try
+
+GSM helper:
+a) incontext
+b) CBR
+c) super helper (different setup answer)
+d) hint
+
+GSM Adversary:
+a) reasoning
+b) no op (math, name)
+c) token
+d) logit
+
