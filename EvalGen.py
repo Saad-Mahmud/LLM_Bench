@@ -24,10 +24,10 @@ from transformers import AutoTokenizer
 max_seq_length = 8192  # adjust as needed
 dtype = None
 load_in_4bit = True
-#model_path = "unsloth/Meta-Llama-3.1-8B"
-#model_name = "unsloth_Meta-Llama-3.1-8B"
-model_path ="lora_model"
-model_name = "unsloth_Meta-Llama-3.1-8B-S1"
+model_path = "unsloth/Qwen2.5-14B-Instruct"
+model_name = "unsloth_Qwen2.5-14B-Instruct"
+#model_path ="S1_Models/Mistral-Small25-S1"
+#model_name = "unsloth_Mistral-Small-24B-Instruct-2501-S1"
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name=model_path,
@@ -43,9 +43,9 @@ FastLanguageModel.for_inference(model)
 def format_prompt(question):
     system_msg = "You are a helpful math solver. You need to think about the solution step by step. Provide a concise final answer at the end."
     prompt = (
-        f"[system] {system_msg}\n"
-        f"[user] {question}\n"
-        f"<thinking> Let's think about this step-by-step."
+        f"<|system|> {system_msg}\n"
+        f"<|user|> {question}\n"
+        f"<|assistant>| Let's think about this step-by-step."
     )
     return prompt
 
@@ -70,6 +70,8 @@ model.to(device)
 # --- Inference and Saving Results ---
 for info in datasets_info:
     dataset_name = info["name"]
+    if dataset_name != "AIME":
+        continue
     ds = info["dataset"]
     field = info["field"]
     num_samples = min(100, len(ds))
@@ -89,10 +91,11 @@ for info in datasets_info:
             **inputs,
             max_new_tokens=8000,
             use_cache=True,
-            eos_token_id=tokenizer.eos_token_id
+            #eos_token_id=tokenizer.eos_token_id
+            eos_token_id=[151643, 151645]
         )
         generated_text = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
-        
+        #print(generated_text)
         # Optionally extract the answer after the "<answer>" tag.
         #answer_parts = generated_text.split("<answer>")
         #answer = answer_parts[1].strip() if len(answer_parts) > 1 else generated_text.strip()
