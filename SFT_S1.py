@@ -34,7 +34,7 @@ raw_dataset = load_dataset("simplescaling/s1K-1.1", split="train")
 
 # Load the model and tokenizer.
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name="unsloth/Mistral-Small-24B-Instruct-2501",
+    model_name="unsloth/Qwen2.5-14B-Instruct",
     max_seq_length=max_seq_length,
     dtype=dtype,
     load_in_4bit=load_in_4bit,
@@ -144,7 +144,7 @@ model = FastLanguageModel.get_peft_model(
 
 # Set up training arguments.
 training_args = TrainingArguments(
-    per_device_train_batch_size=2,
+    per_device_train_batch_size=6,
     gradient_accumulation_steps=4,
     warmup_steps=5,
     num_train_epochs=3,  # Run for 3 full epochs
