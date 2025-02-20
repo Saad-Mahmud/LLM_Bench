@@ -24,10 +24,10 @@ from transformers import AutoTokenizer
 max_seq_length = 8192  # adjust as needed
 dtype = None
 load_in_4bit = True
-model_path = "unsloth/Qwen2.5-14B-Instruct"
-model_name = "unsloth_Qwen2.5-14B-Instruct"
-#model_path ="S1_Models/Mistral-Small25-S1"
-#model_name = "unsloth_Mistral-Small-24B-Instruct-2501-S1"
+#model_path = "unsloth/Meta-Llama-3.1-8B"
+#model_name = "unsloth_Meta-Llama-3.1-8B"
+model_path ="S1_Models/Qwen2.5-14B-S1"
+model_name = "unsloth_Qwen2.5-14B-S1"
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name=model_path,
