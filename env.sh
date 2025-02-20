@@ -22,6 +22,8 @@ echo "Installing additional LLM inference packages..."
 pip install transformers accelerate unsloth unsloth-zoo bitsandbytes 
 pip3 install -U xformers --index-url https://download.pytorch.org/whl/cu126 
 pip install sentencepiece vllm trl flash-attn
+pip install guidance
+pip install --upgrade pydantic
 conda clean --all
 
 echo "Setup complete! Activate your environment with: conda activate llm_inference"
