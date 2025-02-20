@@ -54,6 +54,7 @@ def cal_score(input_file):
     print(f"File Name: {input_file}, Accuracy: {cor/total}")
 
 if __name__ == "__main__":
+    
     cal_score("results/AIME_unsloth_Meta-Llama-3.1-8B_results_p.json")
     cal_score("results/GSM8K_unsloth_Meta-Llama-3.1-8B_results_p.json")
     cal_score("results/MATH500_unsloth_Meta-Llama-3.1-8B_results_p.json")
@@ -61,9 +62,40 @@ if __name__ == "__main__":
     cal_score("results/AIME_unsloth_Meta-Llama-3.1-8B-S1_results_p.json")
     cal_score("results/GSM8K_unsloth_Meta-Llama-3.1-8B-S1_results_p.json")
     cal_score("results/MATH500_unsloth_Meta-Llama-3.1-8B-S1_results_p.json")
+    
+
+    cal_score("results/AIME_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json")
+    cal_score("results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json")
+    cal_score("results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json")
+    
+    cal_score("results/AIME_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json")
+    cal_score("results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json")
+    cal_score("results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json")
+    
+
+    cal_score("results/AIME_unsloth_Qwen2.5-14B-Instruct_results_p.json")
+    cal_score("results/GSM8K_unsloth_Qwen2.5-14B-Instruct_results_p.json")
+    cal_score("results/MATH500_unsloth_Qwen2.5-14B-Instruct_results_p.json")
+    
+    cal_score("results/AIME_unsloth_Qwen2.5-14B-S1_results_p.json")
+    cal_score("results/GSM8K_unsloth_Qwen2.5-14B-S1_results_p.json")
+    cal_score("results/MATH500_unsloth_Qwen2.5-14B-S1_results_p.json")
+    
     #File Name: results/AIME_unsloth_Meta-Llama-3.1-8B_results_p.json, Accuracy: 0.1
     #File Name: results/GSM8K_unsloth_Meta-Llama-3.1-8B_results_p.json, Accuracy: 0.42
     #File Name: results/MATH500_unsloth_Meta-Llama-3.1-8B_results_p.json, Accuracy: 0.22
     #File Name: results/AIME_unsloth_Meta-Llama-3.1-8B-S1_results_p.json, Accuracy: 0.2777777777777778
     #File Name: results/GSM8K_unsloth_Meta-Llama-3.1-8B-S1_results_p.json, Accuracy: 0.7
     #File Name: results/MATH500_unsloth_Meta-Llama-3.1-8B-S1_results_p.json, Accuracy: 0.4639175257731959
+    #File Name: results/AIME_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json, Accuracy: 0.4444444444444444
+    #File Name: results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json, Accuracy: 0.96
+    #File Name: results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json, Accuracy: 0.8
+    #File Name: results/AIME_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json, Accuracy: 0.37777777777777777
+    #File Name: results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json, Accuracy: 0.98
+    #File Name: results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json, Accuracy: 0.83
+    #File Name: results/AIME_unsloth_Qwen2.5-14B-Instruct_results_p.json, Accuracy: 0.43333333333333335
+    #File Name: results/GSM8K_unsloth_Qwen2.5-14B-Instruct_results_p.json, Accuracy: 0.96
+    #File Name: results/MATH500_unsloth_Qwen2.5-14B-Instruct_results_p.json, Accuracy: 0.84
+    #File Name: results/AIME_unsloth_Qwen2.5-14B-S1_results_p.json, Accuracy: 0.32222222222222224
+    #File Name: results/GSM8K_unsloth_Qwen2.5-14B-S1_results_p.json, Accuracy: 0.96
+    #File Name: results/MATH500_unsloth_Qwen2.5-14B-S1_results_p.json, Accuracy: 0.88

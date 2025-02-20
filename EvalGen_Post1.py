@@ -60,6 +60,7 @@ def main(input_file, output_file, data_name):
     process_json_file(input_file, output_file, data_name)
     
 if __name__ == "__main__":
+    '''
     main("results/AIME_unsloth_Meta-Llama-3.1-8B_results.json","results/AIME_unsloth_Meta-Llama-3.1-8B_results_p.json", "AIME")
     main("results/GSM8K_unsloth_Meta-Llama-3.1-8B_results.json","results/GSM8K_unsloth_Meta-Llama-3.1-8B_results_p.json", "GSM8K")
     main("results/MATH500_unsloth_Meta-Llama-3.1-8B_results.json","results/MATH500_unsloth_Meta-Llama-3.1-8B_results_p.json","MATH500")
@@ -67,4 +68,21 @@ if __name__ == "__main__":
     main("results/AIME_unsloth_Meta-Llama-3.1-8B-S1_results.json","results/AIME_unsloth_Meta-Llama-3.1-8B-S1_results_p.json", "AIME")
     main("results/GSM8K_unsloth_Meta-Llama-3.1-8B-S1_results.json","results/GSM8K_unsloth_Meta-Llama-3.1-8B-S1_results_p.json", "GSM8K")
     main("results/MATH500_unsloth_Meta-Llama-3.1-8B-S1_results.json","results/MATH500_unsloth_Meta-Llama-3.1-8B-S1_results_p.json","MATH500")
+    '''
+    main("results/AIME_unsloth_Mistral-Small-24B-Instruct-2501_results.json","results/AIME_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json", "AIME")
+    main("results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501_results.json","results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json", "GSM8K")
+    main("results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501_results.json","results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json","MATH500")
+    
+    main("results/AIME_unsloth_Mistral-Small-24B-Instruct-2501-S1_results.json","results/AIME_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json", "AIME")
+    main("results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501-S1_results.json","results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json", "GSM8K")
+    main("results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501-S1_results.json","results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json","MATH500")
+    
+
+    main("results/AIME_unsloth_Qwen2.5-14B-Instruct_results.json","results/AIME_unsloth_Qwen2.5-14B-Instruct_results_p.json", "AIME")
+    main("results/GSM8K_unsloth_Qwen2.5-14B-Instruct_results.json","results/GSM8K_unsloth_Qwen2.5-14B-Instruct_results_p.json", "GSM8K")
+    main("results/MATH500_unsloth_Qwen2.5-14B-Instruct_results.json","results/MATH500_unsloth_Qwen2.5-14B-Instruct_results_p.json","MATH500")
+    
+    main("results/AIME_unsloth_Qwen2.5-14B-S1_results.json","results/AIME_unsloth_Qwen2.5-14B-S1_results_p.json", "AIME")
+    main("results/GSM8K_unsloth_Qwen2.5-14B-S1_results.json","results/GSM8K_unsloth_Qwen2.5-14B-S1_results_p.json", "GSM8K")
+    main("results/MATH500_unsloth_Qwen2.5-14B-S1_results.json","results/MATH500_unsloth_Qwen2.5-14B-S1_results_p.json","MATH500")
     

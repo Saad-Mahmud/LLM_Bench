@@ -29,7 +29,7 @@ class Query(BaseModel):
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Load the model at startup
-    model_path = "/home/smahmud/Documents/saadprojects/GGUFs/Qwen2.5-32B-Instruct-Q4_K_M.gguf"  # Update this path
+    model_path = "/home/smahmud/Documents/saadprojects/GGUFs/Llama-3.3-70B-Instruct-Q4_K_M.gguf"  # Update this path
     n_layer = -1
     llama_model = Llama(
         model_path=model_path,
