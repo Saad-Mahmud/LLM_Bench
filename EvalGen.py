@@ -26,8 +26,8 @@ dtype = None
 load_in_4bit = True
 #model_path = "unsloth/Meta-Llama-3.1-8B"
 #model_name = "unsloth_Meta-Llama-3.1-8B"
-model_path ="lora_model"
-model_name = "unsloth_Meta-Llama-3.1-8B-S1"
+model_path ="S1_Models/Qwen2.5-14B-S1"
+model_name = "unsloth_Qwen2.5-14B-S1"
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name=model_path,
