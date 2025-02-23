@@ -1,0 +1,24 @@
+
+File Name: results/AIME_unsloth_Meta-Llama-3.1-8B_results_p.json, Accuracy: 0.022222222222222223
+File Name: results/GSM8K_unsloth_Meta-Llama-3.1-8B_results_p.json, Accuracy: 0.38
+File Name: results/MATH500_unsloth_Meta-Llama-3.1-8B_results_p.json, Accuracy: 0.2
+
+File Name: results/AIME_unsloth_Meta-Llama-3.1-8B-S1_results_p.json, Accuracy: 0.17777777777777778
+File Name: results/GSM8K_unsloth_Meta-Llama-3.1-8B-S1_results_p.json, Accuracy: 0.73
+File Name: results/MATH500_unsloth_Meta-Llama-3.1-8B-S1_results_p.json, Accuracy: 0.5360824742268041
+
+File Name: results/AIME_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json, Accuracy: 0.3
+File Name: results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json, Accuracy: 0.96
+File Name: results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501_results_p.json, Accuracy: 0.76
+
+File Name: results/AIME_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json, Accuracy: 0.35555555555555557
+File Name: results/GSM8K_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json, Accuracy: 0.98
+File Name: results/MATH500_unsloth_Mistral-Small-24B-Instruct-2501-S1_results_p.json, Accuracy: 0.83
+
+File Name: results/AIME_unsloth_Qwen2.5-14B-Instruct_results_p.json, Accuracy: 0.25555555555555554
+File Name: results/GSM8K_unsloth_Qwen2.5-14B-Instruct_results_p.json, Accuracy: 0.96
+File Name: results/MATH500_unsloth_Qwen2.5-14B-Instruct_results_p.json, Accuracy: 0.76
+
+File Name: results/AIME_unsloth_Qwen2.5-14B-S1_results_p.json, Accuracy: 0.3111111111111111
+File Name: results/GSM8K_unsloth_Qwen2.5-14B-S1_results_p.json, Accuracy: 0.96
+File Name: results/MATH500_unsloth_Qwen2.5-14B-S1_results_p.json, Accuracy: 0.85

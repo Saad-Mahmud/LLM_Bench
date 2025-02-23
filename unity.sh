@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=S1_Training
-#SBATCH -t 24:00:00
+#SBATCH -t 32:00:00
 #SBATCH -p gpu
 #SBATCH -G 1
 #SBATCH -c 8
@@ -15,6 +15,7 @@ module load conda/latest
 # Activate the conda environment
 source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate llm_inference
+source activate llm_inference
 
 # Set CUDA and Python paths (if needed)
 export CUDA_HOME=$(dirname $(dirname $(which nvcc)))
@@ -31,4 +32,22 @@ python -c "import torch; print(torch.__version__)"
 
 # Run the training script
 echo "Here we go!"
-python EvalGen.py 
+# Start the server in the background.
+echo "Starting Unsloth server..."
+nohup python LLM_server_hf/sd_server.py &   # Replace server_script.py with the name of your server script.
+SERVER_PID=$!
+echo "Server started with PID: $SERVER_PID"
+
+# Wait for 2 minutes to let the server fully initialize.
+echo "Waiting 2 minutes for the server to start..."
+sleep 240
+
+# Now run the EvalGen script.
+echo "Starting EvalGen script..."
+python EvalScore.py 
+
+# Optionally, after EvalGen finishes, kill the server if it's no longer needed.
+echo "Stopping server with PID: $SERVER_PID"
+kill $SERVER_PID
+
+echo "Training and evaluation complete!"

@@ -7,7 +7,7 @@ import asyncio
 import torch
 # Updated vLLM imports for GPU inference.
 from vllm import SamplingParams, LLM
-from structered_decoding import structered_generation
+from LLM_server_hf.structured_decoding import structered_generation
 
 model_id = "unsloth/tinyllama-bnb-4bit"
 llm = LLM(model=model_id, dtype=torch.bfloat16, trust_remote_code=True, \
