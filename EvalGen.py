@@ -26,8 +26,8 @@ dtype = None
 load_in_4bit = True
 #model_path = "unsloth/Meta-Llama-3.1-8B"
 #model_name = "unsloth_Meta-Llama-3.1-8B"
-model_path ="S1_Models/Qwen2.5-14B-S1"
-model_name = "unsloth_Qwen2.5-14B-S1"
+model_path ="simplescaling/s1-32B"
+model_name = "S1-32B"
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name=model_path,
@@ -45,7 +45,7 @@ def format_prompt(question):
     prompt = (
         f"<|system|> {system_msg}\n"
         f"<|user|> {question}\n"
-        f"<|assistant>| Let's think about this step-by-step."
+        f"<|assistant>| "
     )
     return prompt
 
@@ -70,8 +70,8 @@ model.to(device)
 # --- Inference and Saving Results ---
 for info in datasets_info:
     dataset_name = info["name"]
-    if dataset_name != "AIME":
-        continue
+    #if dataset_name == "AIME":
+    #    continue
     ds = info["dataset"]
     field = info["field"]
     num_samples = min(100, len(ds))
