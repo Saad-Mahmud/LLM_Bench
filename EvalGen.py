@@ -26,8 +26,8 @@ dtype = None
 load_in_4bit = True
 #model_path = "unsloth/Meta-Llama-3.1-8B"
 #model_name = "unsloth_Meta-Llama-3.1-8B"
-model_path ="simplescaling/s1-32B"
-model_name = "S1-32B"
+model_path ="unsloth/Meta-Llama-3.1-8B-Instruct"
+model_name = "unsloth_Meta-Llama-3.1-8B"
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name=model_path,

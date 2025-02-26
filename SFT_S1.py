@@ -34,7 +34,7 @@ raw_dataset = load_dataset("simplescaling/s1K-1.1", split="train")
 
 # Load the model and tokenizer.
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name="unsloth/Qwen2.5-14B-Instruct",
+    model_name="unsloth/Meta-Llama-3.1-8B-Instruct",
     max_seq_length=max_seq_length,
     dtype=dtype,
     load_in_4bit=load_in_4bit,

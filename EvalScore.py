@@ -62,6 +62,8 @@ def cal_score(input_file,summary_file="results_summary.txt"):
 if __name__ == "__main__":
     with open("results_summary.txt", "w", encoding="utf-8") as out_f:
         out_f.write("Results Summary:\n")
+    
+    '''
     cal_score("results/AIME_unsloth_Meta-Llama-3.1-8B_results_p.json")
     cal_score("results/GSM8K_unsloth_Meta-Llama-3.1-8B_results_p.json")
     cal_score("results/MATH500_unsloth_Meta-Llama-3.1-8B_results_p.json")
@@ -87,6 +89,14 @@ if __name__ == "__main__":
     cal_score("results/AIME_unsloth_Qwen2.5-14B-S1_results_p.json")
     cal_score("results/GSM8K_unsloth_Qwen2.5-14B-S1_results_p.json")
     cal_score("results/MATH500_unsloth_Qwen2.5-14B-S1_results_p.json")
+    '''
+    cal_score("results/AIME_unsloth_Qwen2.5-32B_results_p.json")
+    cal_score("results/GSM8K_unsloth_Qwen2.5-32B_results_p.json")
+    cal_score("results/MATH500_unsloth_Qwen2.5-32B_results_p.json")
+    
+    cal_score("results/AIME_S1-32B_results_p.json")
+    cal_score("results/GSM8K_S1-32B_results_p.json")
+    cal_score("results/MATH500_S1-32B_results_p.json")
     
     #qwen 32B judge
     #File Name: results/AIME_unsloth_Meta-Llama-3.1-8B_results_p.json, Accuracy: 0.1
@@ -112,7 +122,7 @@ if __name__ == "__main__":
     #File Name: results/AIME_unsloth_Qwen2.5-14B-S1_results_p.json, Accuracy: 0.32222222222222224
     #File Name: results/GSM8K_unsloth_Qwen2.5-14B-S1_results_p.json, Accuracy: 0.96
     #File Name: results/MATH500_unsloth_Qwen2.5-14B-S1_results_p.json, Accuracy: 0.88
-
+    
     #qwen 72B judge
     '''
     File Name: results/AIME_unsloth_Meta-Llama-3.1-8B_results_p.json, Accuracy: 0.022222222222222223
